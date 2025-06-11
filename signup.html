@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
-  <title>Sign Up – satmathpro.space</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up - Free SAT Math Class</title>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .required { color: red; }
+    .error-border { border: 2px solid red; }
+  </style>
 </head>
 <body>
-  <h1>Sign Up</h1>
-  <form
-    action="https://formsubmit.co/shashwats17@gmail.com"
-    method="POST"
-  >
-    <input type="hidden" name="_captcha" value="false" />
-    <input
-      type="hidden"
-      name="_subject"
-      value="🆕 New Signup from satmathpro.space"
-    />
-    <input
-      type="hidden"
-      name="_next"
-      value="https://satmathpro.space/thankyou.html"
-    />
+  <header class="page-header">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="signup.html" class="active">Sign Up</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-content">
+      <h1>Sign Up for My Class</h1>
+    </div>
+  </header>
+  <main>
+    <section class="signup-section">
+      <div class="container">
+        <h2>Register for Your Session</h2>
+        <form action="https://formsubmit.co/shashwats17@gmail.com" method="POST">
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New SAT Math Class Sign Up">
+          <input type="hidden" name="_next" value="https://satmathpro.space/thankyou.html">
 
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required />
+          <label for="name">Full Name: <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required />
+          <label for="email">Email Address: <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required>
 
-    <button type="submit">Sign Up</button>
-  </form>
+          <label for="session">Select a Session Time (Each session lasts 2 hours): <span class="required">*</span></label>
+          <select id="session" name="session" required>
+            <option value="">--Choose a Time Slot--</option>
+            <option value="12:00 PM - 2:00 PM">12:00 PM - 2:00 PM</option>
+            <option value="2:00 PM - 4:00 PM">2:00 PM - 4:00 PM</option>
+            <option value="4:00 PM - 6:00 PM">4:00 PM - 6:00 PM</option>
+            <option value="6:00 PM - 8:00 PM">6:00 PM - 8:00 PM</option>
+          </select>
+
+          <label for="additionalInfo">Additional Information (Optional):</label>
+          <textarea id="additionalInfo" name="additionalInfo" rows="5" placeholder="Enter any additional details here."></textarea>
+
+          <input type="submit" value="Sign Up">
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Free SAT Math Class. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
